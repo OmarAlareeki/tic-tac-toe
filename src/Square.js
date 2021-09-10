@@ -5,7 +5,7 @@ const Square = () => {
 
         <div>
             <button className="square">
-                {}
+                {  }
             </button>
         </div>
     )
