@@ -6,11 +6,13 @@ import Square from './Square'
 const Board = () => {
 
     const [squares, setSquares] = React.useState(Array(9).fill(null));
+    const [xIsNext, setXIsNext] = React.useState(true);
 
     function handleClick(i) {
         let nextSquares = squares.slice();
-        nextSquares[i] = 'X'
+        nextSquares[i] = xIsNext ? 'X' : 'O';
         setSquares(nextSquares)
+        setXIsNext(!xIsNext)
     };
 
     function renderSquare(i) {
